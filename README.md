@@ -80,8 +80,8 @@ stam/
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/tasmaikeni13/stam.git
-cd stam
+git clone https://github.com/tasmaikeni13/STAM.git
+cd STAM
 
 # 2. Install dependencies
 pip install torch torchvision numpy matplotlib scipy
