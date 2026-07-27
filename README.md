@@ -415,4 +415,4 @@ plausible value.
 
 ## License
 
-Apache 2.0.
+Released under the [Apache License 2.0](LICENSE).
