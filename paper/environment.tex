@@ -1,0 +1,7 @@
+\begin{itemize}[leftmargin=1.4em,itemsep=1pt]
+\item Hardware: 2$\times$ Quadro RTX 6000 (sm\_75, 23.5\,GiB, 72 SMs), 36 CPU cores.
+\item Software: PyTorch 2.7.1+cu118 (CUDA 11.8), Python 3.11.14, cuDNN 90100.
+\item Numerical policy selected at run time: reduction accumulator \texttt{float32} (fp64 is rate-limited on this part, so compensated fp32 is used), trajectory storage \texttt{float16}, TF32 unavailable, bf16 tensor cores unavailable.
+\item Every result file records the full environment and the fingerprint of the evaluation set it used.
+\item Reproduce with \texttt{make all}; the Lean proofs with \texttt{cd proofs/StamCert \&\& lake build}.
+\end{itemize}

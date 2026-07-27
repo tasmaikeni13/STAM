@@ -1,0 +1,116 @@
+
+\begin{table}[t]
+\centering
+\caption{Measured cost model \eqref{eq:cost}. $\kappa_r$ is the marginal per-example
+cost of an order-$r$ probe relative to a forward pass; $\tau_r$ is the fixed per-anchor
+overhead in the same unit. Fitted by regressing probe time on sample size.}
+\label{tab:cost}
+\begin{tabular}{lccccccc}
+\toprule
+& \multicolumn{3}{c}{$\kappa_r$} & \multicolumn{3}{c}{$\tau_r$ (examples)} & \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+subject & $r{=}0$ & $r{=}1$ & $r{=}2$ & $r{=}0$ & $r{=}1$ & $r{=}2$ & $\mu$s/example \\
+\midrule
+CNN / CIFAR-10 & 1.00 & 3.90 & 20.82 & 70.2 & 81.5 & 547.7 & 8.2 \\
+Transformer / WikiText-2 & 1.00 & 3.68 & 28.05 & 0.3 & 0.0 & 0.0 & 302.8 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\begin{table}[t]
+\centering
+\caption{Projection fidelity. The $\theta_0$-anchored plane reports a \emph{higher}
+captured-variance ratio $\rho_2$ while having a \emph{larger} out-of-plane residual, on
+both subjects: $\rho_2$ measures a different ratio than the one that matters. The
+projection gap $|\gamma_t|$ is reported in loss units and as a fraction of the relief of
+the drawn surface.}
+\label{tab:fidelity}
+\begin{tabular}{llccccc}
+\toprule
+subject & anchoring & $\rho_2$ & mean residual & mean $|\gamma_t|$ & max $|\gamma_t|$ &
+$|\gamma_t|/$relief \\
+\midrule
+CNN & centered & 0.8689 & 5.85 & 0.0995 & 3.28 & 0.9\% \\
+ & origin & 0.9753 & 6.45 & 0.0926 & 1.15 & 0.8\% \\
+ & endpoint & 0.8689 & 7.04 & 0.071 & 0.903 & 0.6\% \\
+Transformer & centered & 0.9438 & 5.53 & 0.105 & 2.75 & 1.1\% \\
+ & origin & 0.9907 & 6.66 & 0.154 & 1.81 & 1.6\% \\
+ & endpoint & 0.9438 & 7.87 & 0.206 & 1.67 & 2.1\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\begin{table}[t]
+\centering
+\caption{Kernel benchmark on a Quadro RTX 6000 (sm\_75, 672.1 GB/s peak).
+Times are CUDA-event medians at the largest problem size. Accuracy is the maximum
+relative error against an independently computed fp64 reference. Hand-written CUDA wins
+every operation; the two streaming kernels tie with Triton on speed and are broken by
+accuracy.}
+\label{tab:kernels}
+\begin{tabular}{lrrrrrrr}
+\toprule
+& & \multicolumn{4}{c}{CUDA kernel} & \multicolumn{2}{c}{rel.\ error} \\
+\cmidrule(lr){3-6}\cmidrule(lr){7-8}
+operation & size & $\mu$s & vs PyTorch & vs Triton & \% peak BW & CUDA & PyTorch \\
+\midrule
+\texttt{gram\_chunk} & 4{,}194{,}304 & 22057 & 3.08$\times$ & 14.68$\times$ & 7\% & 9.5e-08 & 0.0e+00 \\
+\texttt{plane\_point} & 67{,}108{,}864 & 1870 & 1.52$\times$ & 1.00$\times$ & 85\% & 7.6e-08 & 1.0e-07 \\
+\texttt{project} & 67{,}108{,}864 & 1389 & 1.02$\times$ & 0.96$\times$ & 86\% & 4.4e-09 & 3.6e-06 \\
+\texttt{pu\_taylor} & 1{,}048{,}576 & 545 & 224.50$\times$ & 1.31$\times$ & --- & 6.6e-07 & 0.0e+00 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\begin{table}[t]
+\centering
+\caption{Fitted convergence exponents $p$ in $E\propto C^{-p}$, by least squares in
+log--log over the swept budgets. Predicted values from \Cref{tab:rates}: $3/8=0.375$
+for the surface, $1/3=0.333$ (derivative probes) or $1/4=0.250$ (value-only) for the
+gradient, $1/4$ or $1/8=0.125$ for curvature. A fixed-resolution grid is predicted to
+plateau, i.e.\ to fit an exponent near zero.}
+\label{tab:exponents}
+\begin{tabular}{llccc}
+\toprule
+subject & method & $\ell$ & $\nabla\ell$ & $\nabla^2\ell$ \\
+\midrule
+CNN & PU-Taylor-2 (value+grad+Hess) & 0.112 & 0.053 & 0.131 \\
+ & PU-Taylor-1 (value+grad) & 0.259 & 0.171 & 0.126 \\
+ & local quadratic (values) & 0.302 & 0.274 & 0.189 \\
+ & RBF interpolation (values) & 0.152 & 0.094 & 0.219 \\
+ & grid, refining & 0.169 & -0.290 & -0.695 \\
+ & grid, fixed resolution & 0.707 & 0.633 & 0.443 \\
+Transformer & PU-Taylor-2 (value+grad+Hess) & -0.121 & -0.014 & -0.015 \\
+ & PU-Taylor-1 (value+grad) & 0.238 & 0.321 & 0.273 \\
+ & local quadratic (values) & 0.564 & 0.650 & -0.284 \\
+ & RBF interpolation (values) & 0.313 & 0.312 & 0.515 \\
+ & grid, refining & 0.398 & 0.040 & -0.348 \\
+ & grid, fixed resolution & 0.194 & 0.162 & 0.031 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\begin{table}[t]
+\centering
+\caption{Cost of trajectory capture, measured against matched control epochs run with
+capture disabled. The snapshot copies themselves are essentially free --- they overlap
+with compute on a separate stream --- and the visible cost is the exact reference
+evaluation performed at every snapshot, which is optional and is what makes the
+projection-gap audit possible.}
+\label{tab:overhead}
+\small
+\begin{tabular}{lcccccc}
+\toprule
+& & buffer & \multicolumn{2}{c}{s/epoch} & \multicolumn{2}{c}{overhead} \\
+\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+subject & snapshots & (GiB) & control & capture & copies & incl.\ ref. \\
+\midrule
+CNN / CIFAR-10 & 302 & 0.68 & 2.71 & 6.08 & -3.3\% & 124.2\% \\
+Transformer / WikiText-2 & 202 & 5.66 & 11.82 & 22.44 & 14.2\% & 89.8\% \\
+\bottomrule
+\end{tabular}
+\end{table}
