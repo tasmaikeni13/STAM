@@ -1,0 +1,67 @@
+=== [gpt] budget sweep on devices 0,1 ===
+=== budget sweep: gpt/train ===
+  methods: ['grid-interp', 'grid-refine', 'rbf', 'lstsq2', 'pu-taylor-1', 'pu-taylor-2']
+  budgets: 1.44e+04 .. 9.19e+05 example-equivalents (7 points, 3 seeds)
+  126 jobs across devices [0, 1]
+  estimated probe time 1h 22m
+    5/126  22.25 s elapsed, 8m 58s remaining
+    10/126  1m 18s elapsed, 15m 5s remaining
+    15/126  3m 54s elapsed, 28m 48s remaining
+    20/126  13m 40s elapsed, 1h 12m remaining
+    25/126  14m 13s elapsed, 57m 28s remaining
+    30/126  15m 41s elapsed, 50m 10s remaining
+    35/126  17m 37s elapsed, 45m 49s remaining
+    40/126  25m 41s elapsed, 55m 13s remaining
+    45/126  28m 13s elapsed, 50m 48s remaining
+    50/126  29m 35s elapsed, 44m 58s remaining
+    55/126  32m 7s elapsed, 41m 28s remaining
+    60/126  36m 55s elapsed, 40m 36s remaining
+    65/126  41m 56s elapsed, 39m 22s remaining
+    70/126  43m 8s elapsed, 34m 30s remaining
+    75/126  45m 18s elapsed, 30m 48s remaining
+    80/126  50m 11s elapsed, 28m 52s remaining
+    85/126  56m 25s elapsed, 27m 13s remaining
+    90/126  59m 6s elapsed, 23m 38s remaining
+    95/126  1h 1m elapsed, 20m 11s remaining
+    100/126  1h 6m elapsed, 17m 23s remaining
+    105/126  1h 14m elapsed, 14m 50s remaining
+    110/126  1h 15m elapsed, 10m 58s remaining
+    115/126  1h 17m elapsed, 7m 27s remaining
+    120/126  1h 20m elapsed, 4m 2s remaining
+    125/126  1h 29m elapsed, 42.75 s remaining
+    126/126  1h 32m elapsed, 0.0 ns remaining
+
+  126 results in 1h 32m
+  wrote runs/gpt/sweep_train.json
+=== [gpt] certified landscape + animation on cuda:0 ===
+=== certified landscape: gpt ===
+  budget 689,475 example-forward-equivalents (~208.8 s of probing per split)
+  [train] 114 anchors x 194 examples
+        certified RMSE 0.06319 (<= 0.1037 @95%), true RMSE 0.07106, surface range 9.66
+        relative: certified 0.654%, true 0.735%
+  [val] 76 anchors x 291 examples
+        certified RMSE 0.06994 (<= 0.09568 @95%), true RMSE 0.06889, surface range 7.99
+        relative: certified 0.875%, true 0.862%
+  wrote figures/landscape_gpt.pdf
+  measuring projection gap ...
+    [centered] rho2=0.9438  mean|gap|=0.1054  max|gap|=2.752  (1.1% of relief)
+    [  origin] rho2=0.9907  mean|gap|=0.1539  max|gap|=1.814  (1.6% of relief)
+    [endpoint] rho2=0.9438  mean|gap|=0.206  max|gap|=1.671  (2.1% of relief)
+  building the mini-batch animation ...
+    trust region covers 4.59% of the domain radius on average (tolerance 0.0632)
+    wrote figures/landscape_gpt.gif (202 frames, 3m 42s)
+  wrote runs/gpt/stage4_report.json
+=== [gpt] sharpness study on devices 0,1 ===
+=== sharpness vs sample size: gpt/train ===
+  grid 21x21, sample sizes 8..2048, 3 seeds
+  exact sharpness (from second-order probes): RMS 6.114e-05, p90 7.586e-05
+    B=     8  apparent RMS sharpness   0.007085  ( 115.9x the true value)
+    B=    20  apparent RMS sharpness   0.005489  (  89.8x the true value)
+    B=    50  apparent RMS sharpness   0.004508  (  73.7x the true value)
+    B=   128  apparent RMS sharpness   0.004069  (  66.5x the true value)
+    B=   322  apparent RMS sharpness   0.003886  (  63.6x the true value)
+    B=   812  apparent RMS sharpness   0.003799  (  62.1x the true value)
+    B=  2048  apparent RMS sharpness   0.003764  (  61.6x the true value)
+
+  13m 11s, wrote runs/gpt/sharpness_train.json
+=== [gpt] complete ===

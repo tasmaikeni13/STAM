@@ -1,0 +1,306 @@
+{
+  "task": "gpt",
+  "budget": 689474.7648,
+  "domain": [
+    [
+      -45.72256088256836,
+      90.40457534790039
+    ],
+    [
+      -75.70201206207275,
+      60.425124168395996
+    ]
+  ],
+  "train": {
+    "pipeline": {
+      "method": "pu-taylor-2",
+      "budget": 689474.7648,
+      "spent": {
+        "pilot": 27493.703999999998,
+        "anchors": 620459.9567999993,
+        "certify": 41238.71999999981
+      },
+      "spent_total": 689192.3807999992,
+      "seconds": {
+        "pilot": 8.417193209053949,
+        "probe": 189.74623908102512,
+        "reconstruct": 0.003549117944203317,
+        "certify": 12.957087035989389
+      },
+      "allocation": {
+        "n_anchors": 114,
+        "examples_per_anchor": 194,
+        "order": 2,
+        "budget": 620527.2883199999,
+        "used": 620459.9567999999,
+        "predicted_error": 0.02843698131173391,
+        "predicted_bias": 0.007123461093512276,
+        "predicted_noise": 0.021313520218221634,
+        "spacing": 6.3747372182352695,
+        "kappa": 28.0548,
+        "tau": 0.0,
+        "sigma": 0.2968629851530049,
+        "m3": 4.028055989571368e-05,
+        "m2": 0.002492342861749384,
+        "radius": 68.06356811523438
+      },
+      "sigma": {
+        "sigma": 0.2968629851530049,
+        "sigma_grad": 0.0050303536902652985,
+        "sigma_hess": 0.007865923334980863,
+        "B": 196
+      },
+      "m3": {
+        "m3": 6.724974421135185e-05,
+        "m3_denoised": 4.028055989571368e-05,
+        "m3_median": 2.2786021752721242e-05,
+        "pairs": 20
+      },
+      "m2": 0.002492342861749384,
+      "certificate": {
+        "rmse": 0.06319404150896586,
+        "rmse_upper": 0.1036731810014989,
+        "rmse_raw": 0.06865125522381245,
+        "noise_floor": 0.026823645568194797,
+        "max_abs_residual": 0.4143901528335934,
+        "q90": 0.09402492590776558,
+        "q95": 0.1415835010723805,
+        "q95_upper": 0.1843430188697157,
+        "quantile_level": 0.9907965263632197,
+        "confidence": 0.95,
+        "n_probes": 324,
+        "examples_per_probe": 127,
+        "probe_cost": 41238.71999999981,
+        "coverage": 1.0,
+        "relative_rmse": 0.006652505570937345,
+        "mse_point_estimate": 0.0039934868822369,
+        "mse_upper": 0.010748128458969552,
+        "residual_mean": 0.028589460810825137,
+        "surface_range": 9.499284267425537,
+        "stratified": true,
+        "worst_probe_share": 0.1265316933109238
+      },
+      "n_anchors": 114,
+      "examples_per_anchor": 194,
+      "mean_radius": 20.384556362457396,
+      "coverage": 1.0
+    },
+    "true_error": {
+      "rmse": 0.07106479758689606,
+      "rmse_relative": 0.007353282949603324,
+      "max_abs": 0.602814148645848,
+      "max_relative": 0.06237494725285076,
+      "q90": 0.08514797652605924,
+      "q95": 0.12797246407717458,
+      "bias": -0.029427024362815322,
+      "coverage": 1.0,
+      "reference_range": 9.664363261137623
+    },
+    "seconds": 211.14377229602542
+  },
+  "val": {
+    "pipeline": {
+      "method": "pu-taylor-2",
+      "budget": 689474.7648,
+      "spent": {
+        "pilot": 27493.703999999998,
+        "anchors": 620459.9567999997,
+        "certify": 41238.71999999981
+      },
+      "spent_total": 689192.3807999996,
+      "seconds": {
+        "pilot": 8.424562484957278,
+        "probe": 190.00081004702952,
+        "reconstruct": 0.002493550069630146,
+        "certify": 12.577019084943458
+      },
+      "allocation": {
+        "n_anchors": 76,
+        "examples_per_anchor": 291,
+        "order": 2,
+        "budget": 620527.2883199999,
+        "used": 620459.9567999999,
+        "predicted_error": 0.02469483213459871,
+        "predicted_bias": 0.006140934699875603,
+        "predicted_noise": 0.018553897434723108,
+        "spacing": 7.80742671450273,
+        "kappa": 28.0548,
+        "tau": 0.0,
+        "sigma": 0.3165057803821336,
+        "m3": 1.890175077845678e-05,
+        "m2": 0.0014294626236399065,
+        "radius": 68.06356811523438
+      },
+      "sigma": {
+        "sigma": 0.3165057803821336,
+        "sigma_grad": 0.0057153328776190886,
+        "sigma_hess": 0.004745864840813605,
+        "B": 196
+      },
+      "m3": {
+        "m3": 3.7421036987715204e-05,
+        "m3_denoised": 1.890175077845678e-05,
+        "m3_median": 1.558656294518852e-05,
+        "pairs": 20
+      },
+      "m2": 0.0014294626236399065,
+      "certificate": {
+        "rmse": 0.06994423638420054,
+        "rmse_upper": 0.09567980578400404,
+        "rmse_raw": 0.07491217404877486,
+        "noise_floor": 0.02682606227803506,
+        "max_abs_residual": 0.2981525781586418,
+        "q90": 0.10981408066636919,
+        "q95": 0.14806536670744838,
+        "q95_upper": 0.22086189300056525,
+        "quantile_level": 0.9907965263632197,
+        "confidence": 0.95,
+        "n_probes": 324,
+        "examples_per_probe": 127,
+        "probe_cost": 41238.71999999981,
+        "coverage": 1.0,
+        "relative_rmse": 0.009223704425172567,
+        "mse_point_estimate": 0.004892196203368922,
+        "mse_upper": 0.009154625234864733,
+        "residual_mean": 0.04622374330003143,
+        "surface_range": 7.583096027374268,
+        "stratified": true,
+        "worst_probe_share": 0.053363218344229316
+      },
+      "n_anchors": 76,
+      "examples_per_anchor": 291,
+      "mean_radius": 25.692827987149514,
+      "coverage": 1.0
+    },
+    "true_error": {
+      "rmse": 0.0688924633997561,
+      "rmse_relative": 0.008617863387228844,
+      "max_abs": 0.43426321586593986,
+      "max_relative": 0.05432264842549654,
+      "q90": 0.08973745284602049,
+      "q95": 0.13775203628465513,
+      "bias": -0.04416645950311923,
+      "coverage": 1.0,
+      "reference_range": 7.994146612007171
+    },
+    "seconds": 211.02478844695725
+  },
+  "fidelity": {
+    "centered": {
+      "captured_variance_rho2": 0.943803,
+      "gap_mean_abs": 0.10542366975706126,
+      "gap_max_abs": 2.7515297236386687,
+      "gap_final_abs": 0.11416327068582177,
+      "gap_relative_mean": 0.010908496184222646,
+      "gap_relative_max": 0.2847088472660306,
+      "residual_mean": 5.530056953430176,
+      "residual_max": 21.56804084777832,
+      "residual_fraction_mean": 0.2713511884212494,
+      "surface_range": 9.664363261137623
+    },
+    "origin": {
+      "captured_variance_rho2": 0.990656,
+      "gap_mean_abs": 0.1538989791126155,
+      "gap_max_abs": 1.813593988539651,
+      "gap_final_abs": 0.18831518408842385,
+      "gap_relative_mean": 0.01592437856009352,
+      "gap_relative_max": 0.18765788697455968,
+      "residual_mean": 6.6623125076293945,
+      "residual_max": 17.45954704284668,
+      "residual_fraction_mean": 0.12141666561365128,
+      "surface_range": 9.664363261137623
+    },
+    "endpoint": {
+      "captured_variance_rho2": 0.943803,
+      "gap_mean_abs": 0.20600048145827124,
+      "gap_max_abs": 1.670844551641494,
+      "gap_final_abs": 0.29563876980682835,
+      "gap_relative_mean": 0.021315473755693894,
+      "gap_relative_max": 0.17288718423492017,
+      "residual_mean": 7.866499423980713,
+      "residual_max": 16.155698776245117,
+      "residual_fraction_mean": 0.4023297429084778,
+      "surface_range": 9.664363261137623
+    }
+  },
+  "animation": {
+    "path": "figures/landscape_gpt.gif",
+    "frames": 202,
+    "tolerance": 0.06319404150896586,
+    "trust_radius_mean": 3.1247539966136437,
+    "trust_radius_min": 1.045981140928698,
+    "trust_radius_fraction_mean": 0.04590934744007703,
+    "trust_radius_fraction_max": 0.19307062988281407,
+    "domain_radius": 68.06356811523438,
+    "noise_norm_mean": 0.026567421281453542,
+    "seconds": 221.74034162191674
+  },
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Linux-5.15.0-143-generic-x86_64-with-glibc2.35",
+    "torch": "2.7.1+cu118",
+    "torch_cuda": "11.8",
+    "cudnn": 90100,
+    "cpu_count": 36,
+    "devices": [
+      {
+        "index": 0,
+        "name": "Quadro RTX 6000",
+        "major": 7,
+        "minor": 5,
+        "total_memory": 25190727680,
+        "multi_processor_count": 72,
+        "warp_size": 32,
+        "max_threads_per_block": 1024,
+        "max_threads_per_sm": 1024,
+        "shared_memory_per_block": 49152,
+        "shared_memory_per_sm": 65536,
+        "regs_per_block": 65536,
+        "l2_cache_size": 6291456,
+        "memory_bus_width": 384,
+        "memory_clock_khz": 7001000,
+        "clock_khz": 1770000,
+        "cooperative_launch": true,
+        "source": "cuda_ext",
+        "summary": "[cuda:0] Quadro RTX 6000 sm_75 (Volta/Turing) 23.5 GiB, 72 SMs, 48 KiB smem/block, peak 672 GB/s / 16.3 TFLOP/s fp32 | fp16=y fp16tc=y bf16=n tf32=n redux=n cp.async=n fp64=1/32"
+      },
+      {
+        "index": 1,
+        "name": "Quadro RTX 6000",
+        "major": 7,
+        "minor": 5,
+        "total_memory": 25190727680,
+        "multi_processor_count": 72,
+        "warp_size": 32,
+        "max_threads_per_block": 1024,
+        "max_threads_per_sm": 1024,
+        "shared_memory_per_block": 49152,
+        "shared_memory_per_sm": 65536,
+        "regs_per_block": 65536,
+        "l2_cache_size": 6291456,
+        "memory_bus_width": 384,
+        "memory_clock_khz": 7001000,
+        "clock_khz": 1770000,
+        "cooperative_launch": true,
+        "source": "cuda_ext",
+        "summary": "[cuda:1] Quadro RTX 6000 sm_75 (Volta/Turing) 23.5 GiB, 72 SMs, 48 KiB smem/block, peak 672 GB/s / 16.3 TFLOP/s fp32 | fp16=y fp16tc=y bf16=n tf32=n redux=n cp.async=n fp64=1/32"
+      }
+    ],
+    "policy": {
+      "device": "Quadro RTX 6000",
+      "sm": 75,
+      "arch": "Volta/Turing",
+      "reduce_dtype": "float32",
+      "store_dtype": "float16",
+      "compute_dtype": "float32",
+      "vector_width": 4,
+      "block_size": 256,
+      "use_redux": false,
+      "use_async_copy": false,
+      "allow_tf32": false,
+      "peak_bandwidth_gbps": 672.1,
+      "peak_fp32_gflops": 16312.3,
+      "source": "cuda_ext"
+    }
+  }
+}

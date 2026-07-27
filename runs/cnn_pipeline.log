@@ -1,0 +1,70 @@
+=== [cnn] budget sweep on devices 0 ===
+=== budget sweep: cnn/train ===
+  methods: ['grid-interp', 'grid-refine', 'rbf', 'lstsq2', 'pu-taylor-1', 'pu-taylor-2']
+  budgets: 1.5e+04 .. 3.34e+06 example-equivalents (8 points, 3 seeds)
+  144 jobs across devices [0]
+  estimated probe time 15m 16s
+    5/144  7.28 s elapsed, 3m 23s remaining
+    10/144  12.65 s elapsed, 2m 49s remaining
+    15/144  25.16 s elapsed, 3m 36s remaining
+    20/144  1m 11s elapsed, 7m 20s remaining
+    25/144  2m 53s elapsed, 13m 42s remaining
+    30/144  2m 56s elapsed, 11m 8s remaining
+    35/144  3m 2s elapsed, 9m 26s remaining
+    40/144  3m 18s elapsed, 8m 34s remaining
+    45/144  4m 8s elapsed, 9m 5s remaining
+    50/144  5m 30s elapsed, 10m 20s remaining
+    55/144  5m 33s elapsed, 8m 58s remaining
+    60/144  5m 40s elapsed, 7m 56s remaining
+    65/144  6m 3s elapsed, 7m 21s remaining
+    70/144  7m 20s elapsed, 7m 46s remaining
+    75/144  8m 23s elapsed, 7m 43s remaining
+    80/144  8m 31s elapsed, 6m 48s remaining
+    85/144  8m 44s elapsed, 6m 4s remaining
+    90/144  9m 13s elapsed, 5m 32s remaining
+    95/144  10m 57s elapsed, 5m 39s remaining
+    100/144  11m 34s elapsed, 5m 5s remaining
+    105/144  11m 53s elapsed, 4m 25s remaining
+    110/144  12m 22s elapsed, 3m 49s remaining
+    115/144  13m 13s elapsed, 3m 20s remaining
+    120/144  15m 10s elapsed, 3m 2s remaining
+    125/144  15m 17s elapsed, 2m 19s remaining
+    130/144  15m 31s elapsed, 1m 40s remaining
+    135/144  15m 53s elapsed, 1m 4s remaining
+    140/144  17m 0s elapsed, 29.15 s remaining
+    144/144  19m 11s elapsed, 0.0 ns remaining
+
+  144 results in 19m 11s
+  wrote runs/cnn/sweep_train.json
+=== [cnn] certified landscape + animation on cuda:0 ===
+=== certified landscape: cnn ===
+  budget 524,769 example-forward-equivalents (~4.3 s of probing per split)
+  [train] 83 anchors x 247 examples
+        certified RMSE 0.04829 (<= 0.5352 @95%), true RMSE 0.2603, surface range 11.6
+        relative: certified 0.415%, true 2.238%
+  [val] 59 anchors x 358 examples
+        certified RMSE 0.3883 (<= 1.171 @95%), true RMSE 0.3286, surface range 11.1
+        relative: certified 3.504%, true 2.964%
+  wrote figures/landscape_cnn.pdf
+  measuring projection gap ...
+    [centered] rho2=0.8689  mean|gap|=0.0995  max|gap|=3.279  (0.9% of relief)
+    [  origin] rho2=0.9753  mean|gap|=0.09259  max|gap|=1.148  (0.8% of relief)
+    [endpoint] rho2=0.8689  mean|gap|=0.071  max|gap|=0.903  (0.6% of relief)
+  building the mini-batch animation ...
+    trust region covers 47.35% of the domain radius on average (tolerance 0.0483)
+    wrote figures/landscape_cnn.gif (151 frames, 4m 30s)
+  wrote runs/cnn/stage4_report.json
+=== [cnn] sharpness study on devices 0 ===
+=== sharpness vs sample size: cnn/train ===
+  grid 21x21, sample sizes 8..10000, 3 seeds
+  exact sharpness (from second-order probes): RMS 0.002954, p90 0.001688
+    B=     8  apparent RMS sharpness     0.1141  (  38.6x the true value)
+    B=    26  apparent RMS sharpness    0.06531  (  22.1x the true value)
+    B=    86  apparent RMS sharpness     0.0361  (  12.2x the true value)
+    B=   282  apparent RMS sharpness    0.02459  (   8.3x the true value)
+    B=   928  apparent RMS sharpness    0.01848  (   6.3x the true value)
+    B=  3046  apparent RMS sharpness    0.01617  (   5.5x the true value)
+    B= 10000  apparent RMS sharpness    0.01558  (   5.3x the true value)
+
+  2m 53s, wrote runs/cnn/sharpness_train.json
+=== [cnn] complete ===

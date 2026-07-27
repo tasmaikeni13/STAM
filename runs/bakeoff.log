@@ -1,0 +1,60 @@
+[cuda:0] Quadro RTX 6000 sm_75 (Volta/Turing) 23.5 GiB, 72 SMs, 48 KiB smem/block, peak 672 GB/s / 16.3 TFLOP/s fp32 | fp16=y fp16tc=y bf16=n tf32=n redux=n cp.async=n fp64=1/32
+extension: True  triton: True
+
+--- plane_point ---
+    torch  n= 1,048,576       50.2 us     333.9 GB/s (49.7% peak)  relerr 4.96e-08
+     cuda  n= 1,048,576       32.8 us     512.0 GB/s (76.2% peak)  relerr 7.67e-08
+   triton  n= 1,048,576       65.3 us     256.8 GB/s (38.2% peak)  relerr 7.67e-08
+    torch  n= 4,194,304      182.3 us     368.2 GB/s (54.8% peak)  relerr 8.56e-08
+     cuda  n= 4,194,304      118.2 us     567.6 GB/s (84.4% peak)  relerr 8.56e-08
+   triton  n= 4,194,304      118.9 us     564.3 GB/s (84.0% peak)  relerr 8.56e-08
+    torch  n=16,777,216      709.3 us     378.4 GB/s (56.3% peak)  relerr 5.07e-08
+     cuda  n=16,777,216      462.8 us     580.0 GB/s (86.3% peak)  relerr 8.20e-08
+   triton  n=16,777,216      462.5 us     580.3 GB/s (86.3% peak)  relerr 8.20e-08
+    torch  n=67,108,864     2835.7 us     378.7 GB/s (56.3% peak)  relerr 1.05e-07
+     cuda  n=67,108,864     1870.2 us     574.1 GB/s (85.4% peak)  relerr 7.57e-08
+   triton  n=67,108,864     1866.5 us     575.3 GB/s (85.6% peak)  relerr 7.57e-08
+
+--- project ---
+    torch  n= 1,048,576       40.8 us     308.0 GB/s (45.8% peak)  relerr 1.32e-05
+     cuda  n= 1,048,576       30.7 us     409.6 GB/s (60.9% peak)  relerr 1.17e-06
+   triton  n= 1,048,576       84.9 us     148.3 GB/s (22.1% peak)  relerr 8.17e-07
+    torch  n= 4,194,304      148.6 us     338.6 GB/s (50.4% peak)  relerr 7.34e-07
+     cuda  n= 4,194,304       89.4 us     562.8 GB/s (83.7% peak)  relerr 1.03e-07
+   triton  n= 4,194,304       92.4 us     544.4 GB/s (81.0% peak)  relerr 9.46e-08
+    torch  n=16,777,216      364.5 us     552.3 GB/s (82.2% peak)  relerr 2.51e-06
+     cuda  n=16,777,216      337.3 us     596.9 GB/s (88.8% peak)  relerr 8.06e-08
+   triton  n=16,777,216      337.5 us     596.5 GB/s (88.8% peak)  relerr 7.52e-08
+    torch  n=67,108,864     1420.1 us     567.1 GB/s (84.4% peak)  relerr 3.57e-06
+     cuda  n=67,108,864     1388.8 us     579.9 GB/s (86.3% peak)  relerr 4.40e-09
+   triton  n=67,108,864     1327.6 us     606.6 GB/s (90.3% peak)  relerr 6.42e-08
+
+--- gram_chunk ---
+    torch  n=   262,144     4302.3 us      15.6 GB/s ( 2.3% peak)     249.6 GFLOP/s  relerr 0.00e+00
+     cuda  n=   262,144     1217.3 us      55.1 GB/s ( 8.2% peak)     882.0 GFLOP/s  relerr 1.30e-07
+   triton  n=   262,144    20235.9 us       3.3 GB/s ( 0.5% peak)      53.1 GFLOP/s  relerr 2.25e-06
+    torch  n= 1,048,576    17012.4 us      15.8 GB/s ( 2.3% peak)     252.5 GFLOP/s  relerr 0.00e+00
+     cuda  n= 1,048,576     5417.5 us      49.5 GB/s ( 7.4% peak)     792.8 GFLOP/s  relerr 1.02e-07
+   triton  n= 1,048,576    80977.7 us       3.3 GB/s ( 0.5% peak)      53.0 GFLOP/s  relerr 4.71e-06
+    torch  n= 4,194,304    67869.8 us      15.8 GB/s ( 2.4% peak)     253.1 GFLOP/s  relerr 0.00e+00
+     cuda  n= 4,194,304    22057.0 us      48.7 GB/s ( 7.2% peak)     778.9 GFLOP/s  relerr 9.47e-08
+   triton  n= 4,194,304   323878.2 us       3.3 GB/s ( 0.5% peak)      53.0 GFLOP/s  relerr 7.81e-06
+
+--- pu_taylor ---
+    torch  n=     4,096      751.6 us        20.9 GFLOP/s  relerr 0.00e+00
+     cuda  n=     4,096       26.5 us       592.9 GFLOP/s  relerr 4.93e-07
+   triton  n=     4,096       77.8 us       202.3 GFLOP/s  relerr 4.11e-07
+    torch  n=    65,536     7398.0 us        34.0 GFLOP/s  relerr 0.00e+00
+     cuda  n=    65,536       48.3 us      5211.6 GFLOP/s  relerr 5.34e-07
+   triton  n=    65,536       80.9 us      3110.9 GFLOP/s  relerr 5.34e-07
+    torch  n= 1,048,576   122243.1 us        32.9 GFLOP/s  relerr 0.00e+00
+     cuda  n= 1,048,576      544.5 us      7394.8 GFLOP/s  relerr 6.58e-07
+   triton  n= 1,048,576      712.9 us      5647.9 GFLOP/s  relerr 5.96e-07
+
+=== decision ===
+  gram_chunk   -> cuda    (22057.0 us, 3.08x vs torch)
+  plane_point  -> cuda    (1870.2 us, 1.52x vs torch)
+  project      -> cuda    (1388.8 us, 1.02x vs torch)
+  pu_taylor    -> cuda    (544.5 us, 224.50x vs torch)
+
+wrote runs/bakeoff.json

@@ -1,0 +1,94 @@
+{
+  "choice": {
+    "gram_chunk": "cuda",
+    "plane_point": "cuda",
+    "project": "cuda",
+    "pu_taylor": "cuda"
+  },
+  "detail": {
+    "gram_chunk": {
+      "size": 4194304,
+      "winner": "cuda",
+      "seconds": 0.02205695915222168,
+      "rel_err": 9.472137686478459e-08,
+      "speedup_vs_torch": 3.0770260871505233,
+      "candidates": {
+        "torch": {
+          "seconds": 0.0678698387145996,
+          "rel_err": 0.0
+        },
+        "cuda": {
+          "seconds": 0.02205695915222168,
+          "rel_err": 9.472137686478459e-08
+        },
+        "triton": {
+          "seconds": 0.32387820434570314,
+          "rel_err": 7.813707930977978e-06
+        }
+      }
+    },
+    "plane_point": {
+      "size": 67108864,
+      "winner": "cuda",
+      "seconds": 0.0018701759576797486,
+      "rel_err": 7.567620065160096e-08,
+      "speedup_vs_torch": 1.5162723537023717,
+      "candidates": {
+        "torch": {
+          "seconds": 0.0028356961011886594,
+          "rel_err": 1.0494043654921076e-07
+        },
+        "cuda": {
+          "seconds": 0.0018701759576797486,
+          "rel_err": 7.567620065160096e-08
+        },
+        "triton": {
+          "seconds": 0.001866479992866516,
+          "rel_err": 7.567620065160096e-08
+        }
+      }
+    },
+    "project": {
+      "size": 67108864,
+      "winner": "cuda",
+      "seconds": 0.001388815999031067,
+      "rel_err": 4.397025500642759e-09,
+      "speedup_vs_torch": 1.0224997216793863,
+      "candidates": {
+        "torch": {
+          "seconds": 0.0014200639724731446,
+          "rel_err": 3.574864710005537e-06
+        },
+        "cuda": {
+          "seconds": 0.001388815999031067,
+          "rel_err": 4.397025500642759e-09
+        },
+        "triton": {
+          "seconds": 0.0013275519609451294,
+          "rel_err": 6.418216684165188e-08
+        }
+      }
+    },
+    "pu_taylor": {
+      "size": 1048576,
+      "winner": "cuda",
+      "seconds": 0.0005445119738578797,
+      "rel_err": 6.575830338316607e-07,
+      "speedup_vs_torch": 224.5002467873584,
+      "candidates": {
+        "torch": {
+          "seconds": 0.12224307250976563,
+          "rel_err": 0.0
+        },
+        "cuda": {
+          "seconds": 0.0005445119738578797,
+          "rel_err": 6.575830338316607e-07
+        },
+        "triton": {
+          "seconds": 0.0007129279971122742,
+          "rel_err": 5.959346244099426e-07
+        }
+      }
+    }
+  }
+}

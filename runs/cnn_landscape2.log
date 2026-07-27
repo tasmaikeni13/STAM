@@ -1,0 +1,17 @@
+=== certified landscape: cnn ===
+  budget 524,769 example-forward-equivalents (~4.3 s of probing per split)
+  [train] 83 anchors x 247 examples
+        certified RMSE 0.04829 (<= 0.5352 @95%), true RMSE 0.2603, surface range 11.6
+        relative: certified 0.415%, true 2.238%
+  [val] 59 anchors x 358 examples
+        certified RMSE 0.3883 (<= 1.171 @95%), true RMSE 0.3286, surface range 11.1
+        relative: certified 3.504%, true 2.964%
+  wrote figures/landscape_cnn.pdf
+  measuring projection gap ...
+    [centered] rho2=0.8689  mean|gap|=0.0995  max|gap|=3.279  (0.9% of relief)
+    [  origin] rho2=0.9753  mean|gap|=0.09259  max|gap|=1.148  (0.8% of relief)
+    [endpoint] rho2=0.8689  mean|gap|=0.071  max|gap|=0.903  (0.6% of relief)
+  building the mini-batch animation ...
+    trust region covers 47.35% of the domain radius on average (tolerance 0.0483)
+    wrote figures/landscape_cnn.gif (151 frames, 4m 39s)
+  wrote runs/cnn/stage4_report.json

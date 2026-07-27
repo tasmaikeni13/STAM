@@ -1,0 +1,59 @@
+info: StamCert: no previous manifest, creating one from scratch
+info: leanprover-community/mathlib: cloning https://github.com/leanprover-community/mathlib4
+info: leanprover-community/mathlib: checking out revision '520045ab14e26149ee970e2e617ca04b09bde5d6'
+info: plausible: cloning https://github.com/leanprover-community/plausible
+info: plausible: checking out revision 'e12c1910fe855cbfc38803cd4e55543906d5fa62'
+info: LeanSearchClient: cloning https://github.com/leanprover-community/LeanSearchClient
+info: LeanSearchClient: checking out revision 'c5d5b8fe6e5158def25cd28eb94e4141ad97c843'
+info: importGraph: cloning https://github.com/leanprover-community/import-graph
+info: importGraph: checking out revision '7e9612bf0b9ee66db3cb5b9988a35afc706f5a12'
+info: proofwidgets: cloning https://github.com/leanprover-community/ProofWidgets4
+info: proofwidgets: checking out revision '6e311e2a844da9b2cc3971187df2fe0066947b93'
+info: aesop: cloning https://github.com/leanprover-community/aesop
+info: aesop: checking out revision 'a7dbf0c63b694e47f425f3dcddbc0e178bb432d3'
+info: Qq: cloning https://github.com/leanprover-community/quote4
+info: Qq: checking out revision '38d591e778f100aec9762bb582f9c7f55f50e9dc'
+info: batteries: cloning https://github.com/leanprover-community/batteries
+info: batteries: checking out revision '023ce7d62a0531e22a5331e20b587817a80d49ff'
+info: Cli: cloning https://github.com/leanprover/lean4-cli
+info: Cli: checking out revision '88679d088c9720c27ebdf2ba4dafe17341747f94'
+info: mathlib: running post-update hooks
+✔ [2/6] Built Cache.Cli (347ms)
+✔ [3/6] Built Cache.Lean (422ms)
+✔ [7/27] Built Cache.Cli:c.o (147ms)
+✔ [8/27] Built Cache.Lean:c.o (182ms)
+✔ [9/27] Built Cache.Infra (504ms)
+✔ [10/27] Built Cache.Infra:c.o (293ms)
+✔ [11/27] Built Batteries.Tactic.OpenPrivate (1.3s)
+✔ [12/27] Built Batteries.Tactic.OpenPrivate:c.o (1.1s)
+✔ [13/27] Built Cache.IO (2.3s)
+✔ [14/27] Built Cache.Hashing (963ms)
+✔ [15/27] Built Cache.Hashing:c.o (436ms)
+✔ [16/27] Built Cache.IO:c.o (1.5s)
+✔ [17/27] Built Cache.Requests (3.4s)
+✔ [18/27] Built Cache.Marker (650ms)
+✔ [19/27] Built Cache.Marker:c.o (118ms)
+✔ [20/27] Built Cache.Query (878ms)
+✔ [21/27] Built Cache.Query:c.o (342ms)
+✔ [22/27] Built Cache.Warning (757ms)
+✔ [23/27] Built Cache.Requests:c.o (2.6s)
+✔ [24/27] Built Cache.Warning:c.o (390ms)
+✔ [25/27] Built Cache.Main (2.1s)
+✔ [26/27] Built Cache.Main:c.o (942ms)
+✔ [27/27] Built cache:exe (1.2s)
+Current branch: HEAD
+Using cache from origin: (some leanprover-community/mathlib4)
+Decompressing 8638 already-cached file(s) (1 already decompressed)
+No files to download
+Decompressed 8638 already-cached file(s)
+Completed successfully in 11998 ms!
+--- toolchain ---
+leanprover/lean4:v4.32.1
+--- fetching mathlib cache ---
+Current branch: HEAD
+Using cache from origin: (some leanprover-community/mathlib4)
+No files to download
+Already decompressed 8639 file(s)
+--- building mathlib deps ---
+Build completed successfully (2041 jobs).
+SETUP_DONE

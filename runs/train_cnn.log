@@ -1,0 +1,41 @@
+=== training cnn on cuda:0 ===
+  FlatParams(numel=402,986, tensors=14, dtype=torch.float32, device=cuda:0)
+  {"total": 402986, "millions": 0.403, "features": 139424, "classifier": 263562}
+  data: {"dataset": "CIFAR-10", "train_size": 50000, "eval_train_size": 10000, "eval_val_size": 10000, "augmentation": "none", "normalisation": {"mean": [0.4914, 0.4822, 0.4465], "std": [0.247, 0.2435, 0.2616]}}
+  eval micro-batch tuned to 1024 (107,683 ex/s, peak 1.08 GiB)
+  epoch   1/30  train 1.0776 (61.88%)  val 1.0984 (61.61%)  5.90 s
+  epoch   2/30  train 0.7526 (73.68%)  val 0.8517 (70.56%)  6.32 s
+  epoch   3/30  train 0.5755 (79.51%)  val 0.7713 (73.55%)  5.85 s
+  epoch   4/30  train 0.4760 (83.54%)  val 0.7611 (74.83%)  5.86 s
+  epoch   5/30  train 0.3715 (86.69%)  val 0.7609 (75.48%)  5.90 s
+  epoch   6/30  train 0.2981 (89.79%)  val 0.7816 (75.45%)  6.19 s
+  epoch   7/30  train 0.1992 (93.41%)  val 0.8169 (76.39%)  5.92 s
+  epoch   8/30  train 0.1446 (95.22%)  val 0.8874 (76.14%)  5.93 s
+  epoch   9/30  train 0.1042 (96.51%)  val 0.9923 (76.65%)  5.93 s
+  epoch  10/30  train 0.1050 (96.21%)  val 1.1338 (75.95%)  6.03 s
+  epoch  11/30  train 0.0748 (97.35%)  val 1.1982 (76.35%)  6.18 s
+  epoch  12/30  train 0.0606 (97.87%)  val 1.3923 (75.96%)  6.34 s
+  epoch  13/30  train 0.0363 (98.79%)  val 1.3985 (77.42%)  6.32 s
+  epoch  14/30  train 0.0300 (98.91%)  val 1.4491 (76.87%)  5.92 s
+  epoch  15/30  train 0.0421 (98.70%)  val 1.6808 (76.86%)  5.98 s
+  epoch  16/30  train 0.0266 (99.09%)  val 1.8276 (77.22%)  5.95 s
+  epoch  17/30  train 0.0159 (99.47%)  val 1.8661 (77.34%)  6.01 s
+  epoch  18/30  train 0.0075 (99.77%)  val 1.9954 (77.71%)  6.24 s
+  epoch  19/30  train 0.0048 (99.88%)  val 2.0544 (77.38%)  6.32 s
+  epoch  20/30  train 0.0028 (99.93%)  val 2.1751 (77.58%)  6.39 s
+  epoch  21/30  train 0.0007 (100.00%)  val 2.2009 (78.35%)  6.27 s
+  epoch  22/30  train 0.0003 (99.99%)  val 2.2613 (78.24%)  5.95 s
+  epoch  23/30  train 0.0001 (100.00%)  val 2.2785 (78.40%)  6.17 s
+  epoch  24/30  train 0.0001 (100.00%)  val 2.3026 (78.33%)  6.19 s
+  epoch  25/30  train 0.0000 (100.00%)  val 2.3208 (78.30%)  5.99 s
+  epoch  26/30  train 0.0000 (100.00%)  val 2.3339 (78.38%)  5.96 s
+  epoch  27/30  train 0.0000 (100.00%)  val 2.3428 (78.40%)  6.09 s
+  epoch  28/30  train 0.0000 (100.00%)  val 2.3480 (78.41%)  5.95 s
+  epoch  29/30  train 0.0000 (100.00%)  val 2.3503 (78.43%)  6.27 s
+  epoch  30/30  train 0.0000 (100.00%)  val 2.3506 (78.44%)  6.19 s
+
+  snapshots: 302  parameters: 402,986
+  trajectory buffer: 0.68 GiB
+  capture overhead: 124.2% of epoch time (-3.3% excluding reference evaluations)
+  total: 3m 14s
+  wrote runs/cnn

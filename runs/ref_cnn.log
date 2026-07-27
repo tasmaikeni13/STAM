@@ -1,0 +1,36 @@
+=== reference surfaces for cnn on devices [0] ===
+  trajectory: 302 snapshots x 402,986 parameters
+  plane[centered] rho2=0.8689 orth_err=1.79e-07 residual mean=5.847 max=12.71 (0.8s, gram in float16)
+  plane[  origin] rho2=0.9753 orth_err=1.19e-07 residual mean=6.449 max=11.6 (0.4s, gram in float16)
+  plane[endpoint] rho2=0.8689 orth_err=1.19e-07 residual mean=7.044 max=12.38 (0.4s, gram in float16)
+  domain: x(-27.210608673095706, 53.66198654174805) y(-39.28498287200928, 41.587612342834475)  radius 40.44
+  micro-batch[train] = 1024 (120,123 ex/s, peak 1.09 GiB)
+  micro-batch[val] = 1024 (119,615 ex/s, peak 1.09 GiB)
+  cost model: kappa={0: 1.0, 1: 3.9, 2: 20.82} tau={0: 70.2, 1: 81.5, 2: 547.7} example-equivalents, 8.21 us/example
+  value grid 75x75, derivative grid 37x37; estimated 54m 25s
+  348 jobs across 1 device(s)
+    17/348 jobs  1m 36s elapsed, 31m 3s remaining
+    34/348 jobs  3m 10s elapsed, 29m 17s remaining
+    51/348 jobs  4m 45s elapsed, 27m 40s remaining
+    68/348 jobs  6m 20s elapsed, 26m 5s remaining
+    85/348 jobs  7m 55s elapsed, 24m 30s remaining
+    102/348 jobs  9m 29s elapsed, 22m 53s remaining
+    119/348 jobs  11m 4s elapsed, 21m 18s remaining
+    136/348 jobs  12m 39s elapsed, 19m 43s remaining
+    153/348 jobs  14m 14s elapsed, 18m 9s remaining
+    170/348 jobs  15m 49s elapsed, 16m 34s remaining
+    187/348 jobs  21m 33s elapsed, 18m 34s remaining
+    204/348 jobs  29m 35s elapsed, 20m 53s remaining
+    221/348 jobs  37m 37s elapsed, 21m 37s remaining
+    238/348 jobs  45m 38s elapsed, 21m 5s remaining
+    255/348 jobs  53m 39s elapsed, 19m 34s remaining
+    272/348 jobs  1h 1m elapsed, 17m 15s remaining
+    289/348 jobs  1h 9m elapsed, 14m 17s remaining
+    306/348 jobs  1h 17m elapsed, 10m 42s remaining
+    323/348 jobs  1h 26m elapsed, 6m 39s remaining
+    340/348 jobs  1h 34m elapsed, 2m 13s remaining
+    348/348 jobs  1h 37m elapsed, 0.0 ns remaining
+
+  surface range (train): 479.3242
+  total: 1h 37m
+  wrote runs/cnn/reference.npz

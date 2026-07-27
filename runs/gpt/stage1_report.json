@@ -1,0 +1,173 @@
+{
+  "task": "gpt",
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Linux-5.15.0-143-generic-x86_64-with-glibc2.35",
+    "torch": "2.7.1+cu118",
+    "torch_cuda": "11.8",
+    "cudnn": 90100,
+    "cpu_count": 36,
+    "devices": [
+      {
+        "index": 0,
+        "name": "Quadro RTX 6000",
+        "major": 7,
+        "minor": 5,
+        "total_memory": 25190727680,
+        "multi_processor_count": 72,
+        "warp_size": 32,
+        "max_threads_per_block": 1024,
+        "max_threads_per_sm": 1024,
+        "shared_memory_per_block": 49152,
+        "shared_memory_per_sm": 65536,
+        "regs_per_block": 65536,
+        "l2_cache_size": 6291456,
+        "memory_bus_width": 384,
+        "memory_clock_khz": 7001000,
+        "clock_khz": 1770000,
+        "cooperative_launch": true,
+        "source": "cuda_ext",
+        "summary": "[cuda:0] Quadro RTX 6000 sm_75 (Volta/Turing) 23.5 GiB, 72 SMs, 48 KiB smem/block, peak 672 GB/s / 16.3 TFLOP/s fp32 | fp16=y fp16tc=y bf16=n tf32=n redux=n cp.async=n fp64=1/32"
+      },
+      {
+        "index": 1,
+        "name": "Quadro RTX 6000",
+        "major": 7,
+        "minor": 5,
+        "total_memory": 25190727680,
+        "multi_processor_count": 72,
+        "warp_size": 32,
+        "max_threads_per_block": 1024,
+        "max_threads_per_sm": 1024,
+        "shared_memory_per_block": 49152,
+        "shared_memory_per_sm": 65536,
+        "regs_per_block": 65536,
+        "l2_cache_size": 6291456,
+        "memory_bus_width": 384,
+        "memory_clock_khz": 7001000,
+        "clock_khz": 1770000,
+        "cooperative_launch": true,
+        "source": "cuda_ext",
+        "summary": "[cuda:1] Quadro RTX 6000 sm_75 (Volta/Turing) 23.5 GiB, 72 SMs, 48 KiB smem/block, peak 672 GB/s / 16.3 TFLOP/s fp32 | fp16=y fp16tc=y bf16=n tf32=n redux=n cp.async=n fp64=1/32"
+      }
+    ],
+    "policy": {
+      "device": "Quadro RTX 6000",
+      "sm": 75,
+      "arch": "Volta/Turing",
+      "reduce_dtype": "float32",
+      "store_dtype": "float16",
+      "compute_dtype": "float32",
+      "vector_width": 4,
+      "block_size": 256,
+      "use_redux": false,
+      "use_async_copy": false,
+      "allow_tf32": false,
+      "peak_bandwidth_gbps": 672.1,
+      "peak_fp32_gflops": 16312.3,
+      "source": "cuda_ext"
+    }
+  },
+  "model": {
+    "total": 5018112,
+    "millions": 5.018,
+    "tok": 1802240,
+    "pos": 65536,
+    "blocks": 3149824,
+    "ln_f": 512
+  },
+  "data": {
+    "dataset": "WikiText-2 (raw)",
+    "tokenizer": "byte-level BPE, vocab 7040",
+    "context": 256,
+    "train_sequences": 10911,
+    "eval_train_sequences": 2048,
+    "eval_val_sequences": 1024,
+    "tokens_train": 2793471,
+    "tokens_val": 294147
+  },
+  "cost_unit": {
+    "unit": "sequence of 256 tokens",
+    "elements_per_unit": 256
+  },
+  "train_config": {
+    "epochs": 40,
+    "batch_size": 32,
+    "lr": 0.0003,
+    "weight_decay": 0.01,
+    "optimizer": "adamw",
+    "momentum": 0.9,
+    "warmup_steps": 200,
+    "schedule": "cosine",
+    "grad_clip": 1.0,
+    "snapshot_stride": 68,
+    "capture_gradients": true,
+    "grad_dtype": "float16",
+    "seed": 0,
+    "control_epochs": 2,
+    "eval_batch": 512
+  },
+  "timing": {
+    "wall_seconds": 897.6637710259529,
+    "compute_seconds": 469.42425035953056,
+    "capture_seconds": 0.11380684340838343,
+    "snapshot_eval_seconds": 357.47587618546095,
+    "snapshots": 202,
+    "steps": 13600,
+    "steps_per_epoch": 340,
+    "seconds_per_epoch_with_capture": 22.4411790882441,
+    "seconds_per_epoch_control": 11.822606903500855,
+    "snapshot_bytes": 6081951744,
+    "capture_overhead_fraction": 0.8981582718105023,
+    "capture_overhead_excl_eval": 0.14224234078261966
+  },
+  "batch_tuning": {
+    "micro_batch": 512,
+    "examples_per_second": 3555.0,
+    "peak_bytes": 7493784064,
+    "peak_gib": 6.98,
+    "curve": [
+      {
+        "micro_batch": 128,
+        "seconds": 0.040657,
+        "throughput": 3148.3,
+        "peak_gib": 1.821
+      },
+      {
+        "micro_batch": 256,
+        "seconds": 0.073908,
+        "throughput": 3463.7,
+        "peak_gib": 3.54
+      },
+      {
+        "micro_batch": 512,
+        "seconds": 0.144021,
+        "throughput": 3555.0,
+        "peak_gib": 6.979
+      }
+    ]
+  },
+  "memory": [
+    {
+      "device": 1,
+      "name": "Quadro RTX 6000",
+      "total_gib": 23.46,
+      "used_gib": 12.92,
+      "torch_reserved_gib": 12.68,
+      "torch_allocated_gib": 0.11
+    }
+  ],
+  "final": {
+    "epoch": 40,
+    "batch_loss": 2.61261503906811,
+    "train_loss": 2.61017644405365,
+    "train_acc": 0.49468994140625,
+    "val_loss": 5.032160758972168,
+    "val_acc": 0.23929977416992188,
+    "seconds": 22.45421187998727,
+    "lr": 0.0
+  },
+  "eval_train_fingerprint": "44baaf3c7a14dd64",
+  "eval_val_fingerprint": "38d9bd4618693501",
+  "total_seconds": 935.551040248014
+}

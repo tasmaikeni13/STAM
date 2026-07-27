@@ -1,0 +1,529 @@
+{
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Linux-5.15.0-143-generic-x86_64-with-glibc2.35",
+    "torch": "2.7.1+cu118",
+    "torch_cuda": "11.8",
+    "cudnn": 90100,
+    "cpu_count": 36,
+    "devices": [
+      {
+        "index": 0,
+        "name": "Quadro RTX 6000",
+        "major": 7,
+        "minor": 5,
+        "total_memory": 25190727680,
+        "multi_processor_count": 72,
+        "warp_size": 32,
+        "max_threads_per_block": 1024,
+        "max_threads_per_sm": 1024,
+        "shared_memory_per_block": 49152,
+        "shared_memory_per_sm": 65536,
+        "regs_per_block": 65536,
+        "l2_cache_size": 6291456,
+        "memory_bus_width": 384,
+        "memory_clock_khz": 7001000,
+        "clock_khz": 1770000,
+        "cooperative_launch": true,
+        "source": "cuda_ext",
+        "summary": "[cuda:0] Quadro RTX 6000 sm_75 (Volta/Turing) 23.5 GiB, 72 SMs, 48 KiB smem/block, peak 672 GB/s / 16.3 TFLOP/s fp32 | fp16=y fp16tc=y bf16=n tf32=n redux=n cp.async=n fp64=1/32"
+      },
+      {
+        "index": 1,
+        "name": "Quadro RTX 6000",
+        "major": 7,
+        "minor": 5,
+        "total_memory": 25190727680,
+        "multi_processor_count": 72,
+        "warp_size": 32,
+        "max_threads_per_block": 1024,
+        "max_threads_per_sm": 1024,
+        "shared_memory_per_block": 49152,
+        "shared_memory_per_sm": 65536,
+        "regs_per_block": 65536,
+        "l2_cache_size": 6291456,
+        "memory_bus_width": 384,
+        "memory_clock_khz": 7001000,
+        "clock_khz": 1770000,
+        "cooperative_launch": true,
+        "source": "cuda_ext",
+        "summary": "[cuda:1] Quadro RTX 6000 sm_75 (Volta/Turing) 23.5 GiB, 72 SMs, 48 KiB smem/block, peak 672 GB/s / 16.3 TFLOP/s fp32 | fp16=y fp16tc=y bf16=n tf32=n redux=n cp.async=n fp64=1/32"
+      }
+    ],
+    "policy": {
+      "device": "Quadro RTX 6000",
+      "sm": 75,
+      "arch": "Volta/Turing",
+      "reduce_dtype": "float32",
+      "store_dtype": "float16",
+      "compute_dtype": "float32",
+      "vector_width": 4,
+      "block_size": 256,
+      "use_redux": false,
+      "use_async_copy": false,
+      "allow_tf32": false,
+      "peak_bandwidth_gbps": 672.1,
+      "peak_fp32_gflops": 16312.3,
+      "source": "cuda_ext"
+    }
+  },
+  "rows": [
+    {
+      "op": "plane_point",
+      "n": 1048576,
+      "backend": "torch",
+      "seconds": 5.023999884724617e-05,
+      "gbps": 333.9414089361512,
+      "rel_err": 4.9570189566449773e-08
+    },
+    {
+      "op": "plane_point",
+      "n": 1048576,
+      "backend": "cuda",
+      "seconds": 3.2767999917268756e-05,
+      "gbps": 512.0000012926757,
+      "rel_err": 7.669975856733875e-08
+    },
+    {
+      "op": "plane_point",
+      "n": 1048576,
+      "backend": "triton",
+      "seconds": 6.53279982507229e-05,
+      "gbps": 256.81509382256866,
+      "rel_err": 7.669975856733875e-08
+    },
+    {
+      "op": "plane_point",
+      "n": 4194304,
+      "backend": "torch",
+      "seconds": 0.0001822720021009445,
+      "gbps": 368.1797710371024,
+      "rel_err": 8.556583618537177e-08
+    },
+    {
+      "op": "plane_point",
+      "n": 4194304,
+      "backend": "cuda",
+      "seconds": 0.00011823999881744385,
+      "gbps": 567.5648229971015,
+      "rel_err": 8.556663395466653e-08
+    },
+    {
+      "op": "plane_point",
+      "n": 4194304,
+      "backend": "triton",
+      "seconds": 0.0001189279966056347,
+      "gbps": 564.2814637039,
+      "rel_err": 8.556663395466653e-08
+    },
+    {
+      "op": "plane_point",
+      "n": 16777216,
+      "backend": "torch",
+      "seconds": 0.0007093120217323304,
+      "gbps": 378.4448138132617,
+      "rel_err": 5.074050007493204e-08
+    },
+    {
+      "op": "plane_point",
+      "n": 16777216,
+      "backend": "cuda",
+      "seconds": 0.0004628480076789856,
+      "gbps": 579.9645921478763,
+      "rel_err": 8.203083641467474e-08
+    },
+    {
+      "op": "plane_point",
+      "n": 16777216,
+      "backend": "triton",
+      "seconds": 0.0004625439941883087,
+      "gbps": 580.3457819640737,
+      "rel_err": 8.203083641467474e-08
+    },
+    {
+      "op": "plane_point",
+      "n": 67108864,
+      "backend": "torch",
+      "seconds": 0.0028356961011886594,
+      "gbps": 378.65193789627597,
+      "rel_err": 1.0494043654921076e-07
+    },
+    {
+      "op": "plane_point",
+      "n": 67108864,
+      "backend": "cuda",
+      "seconds": 0.0018701759576797486,
+      "gbps": 574.1394651079505,
+      "rel_err": 7.567620065160096e-08
+    },
+    {
+      "op": "plane_point",
+      "n": 67108864,
+      "backend": "triton",
+      "seconds": 0.001866479992866516,
+      "gbps": 575.2763641205503,
+      "rel_err": 7.567620065160096e-08
+    },
+    {
+      "op": "project",
+      "n": 1048576,
+      "backend": "torch",
+      "seconds": 4.084799997508526e-05,
+      "gbps": 308.04230336062466,
+      "rel_err": 1.3249528972815525e-05
+    },
+    {
+      "op": "project",
+      "n": 1048576,
+      "backend": "cuda",
+      "seconds": 3.071999922394752e-05,
+      "gbps": 409.60001034736666,
+      "rel_err": 1.172281076476648e-06
+    },
+    {
+      "op": "project",
+      "n": 1048576,
+      "backend": "triton",
+      "seconds": 8.486399799585343e-05,
+      "gbps": 148.27149671424647,
+      "rel_err": 8.165247520516021e-07
+    },
+    {
+      "op": "project",
+      "n": 4194304,
+      "backend": "torch",
+      "seconds": 0.0001486399993300438,
+      "gbps": 338.6144256381649,
+      "rel_err": 7.341608946916454e-07
+    },
+    {
+      "op": "project",
+      "n": 4194304,
+      "backend": "cuda",
+      "seconds": 8.942400291562079e-05,
+      "gbps": 562.8427084335759,
+      "rel_err": 1.0332932989170233e-07
+    },
+    {
+      "op": "project",
+      "n": 4194304,
+      "backend": "triton",
+      "seconds": 9.244800359010696e-05,
+      "gbps": 544.4319622428935,
+      "rel_err": 9.462290500981622e-08
+    },
+    {
+      "op": "project",
+      "n": 16777216,
+      "backend": "torch",
+      "seconds": 0.000364544004201889,
+      "gbps": 552.2696565556537,
+      "rel_err": 2.5091884945118697e-06
+    },
+    {
+      "op": "project",
+      "n": 16777216,
+      "backend": "cuda",
+      "seconds": 0.0003372799903154373,
+      "gbps": 596.9123511054171,
+      "rel_err": 8.059919637854035e-08
+    },
+    {
+      "op": "project",
+      "n": 16777216,
+      "backend": "triton",
+      "seconds": 0.00033750399947166446,
+      "gbps": 596.5161666681304,
+      "rel_err": 7.515236543859546e-08
+    },
+    {
+      "op": "project",
+      "n": 67108864,
+      "backend": "torch",
+      "seconds": 0.0014200639724731446,
+      "gbps": 567.0916124979218,
+      "rel_err": 3.574864710005537e-06
+    },
+    {
+      "op": "project",
+      "n": 67108864,
+      "backend": "cuda",
+      "seconds": 0.001388815999031067,
+      "gbps": 579.8510159458393,
+      "rel_err": 4.397025500642759e-09
+    },
+    {
+      "op": "project",
+      "n": 67108864,
+      "backend": "triton",
+      "seconds": 0.0013275519609451294,
+      "gbps": 606.6100549666434,
+      "rel_err": 6.418216684165188e-08
+    },
+    {
+      "op": "gram_chunk",
+      "n": 262144,
+      "T": 64,
+      "backend": "torch",
+      "seconds": 0.004302304029464722,
+      "gbps": 15.598354635190542,
+      "gflops": 249.57367416304868,
+      "rel_err": 0.0
+    },
+    {
+      "op": "gram_chunk",
+      "n": 262144,
+      "T": 64,
+      "backend": "cuda",
+      "seconds": 0.0012173280119895935,
+      "gbps": 55.12800439900967,
+      "gflops": 882.0480703841547,
+      "rel_err": 1.2998336854483006e-07
+    },
+    {
+      "op": "gram_chunk",
+      "n": 262144,
+      "T": 64,
+      "backend": "triton",
+      "seconds": 0.020235856056213378,
+      "gbps": 3.3163343232714073,
+      "gflops": 53.06134917234252,
+      "rel_err": 2.2459540082226314e-06
+    },
+    {
+      "op": "gram_chunk",
+      "n": 1048576,
+      "T": 64,
+      "backend": "torch",
+      "seconds": 0.017012367248535158,
+      "gbps": 15.778842066974159,
+      "gflops": 252.46147307158654,
+      "rel_err": 0.0
+    },
+    {
+      "op": "gram_chunk",
+      "n": 1048576,
+      "T": 64,
+      "backend": "cuda",
+      "seconds": 0.005417488098144531,
+      "gbps": 49.549800781646034,
+      "gflops": 792.7968125063366,
+      "rel_err": 1.0244490892223996e-07
+    },
+    {
+      "op": "gram_chunk",
+      "n": 1048576,
+      "T": 64,
+      "backend": "triton",
+      "seconds": 0.08097769546508789,
+      "gbps": 3.3149307899942797,
+      "gflops": 53.038892639908475,
+      "rel_err": 4.706865457085606e-06
+    },
+    {
+      "op": "gram_chunk",
+      "n": 4194304,
+      "T": 64,
+      "backend": "torch",
+      "seconds": 0.0678698387145996,
+      "gbps": 15.820603737032684,
+      "gflops": 253.12965979252294,
+      "rel_err": 0.0
+    },
+    {
+      "op": "gram_chunk",
+      "n": 4194304,
+      "T": 64,
+      "backend": "cuda",
+      "seconds": 0.02205695915222168,
+      "gbps": 48.68041041332062,
+      "gflops": 778.88656661313,
+      "rel_err": 9.472137686478459e-08
+    },
+    {
+      "op": "gram_chunk",
+      "n": 4194304,
+      "T": 64,
+      "backend": "triton",
+      "seconds": 0.32387820434570314,
+      "gbps": 3.3152642246154445,
+      "gflops": 53.04422759384711,
+      "rel_err": 7.813707930977978e-06
+    },
+    {
+      "op": "pu_taylor",
+      "m": 4096,
+      "n_anchors": 96,
+      "backend": "torch",
+      "seconds": 0.000751583993434906,
+      "gflops": 20.92732167979871,
+      "rel_err": 0.0
+    },
+    {
+      "op": "pu_taylor",
+      "m": 4096,
+      "n_anchors": 96,
+      "backend": "cuda",
+      "seconds": 2.6528000831604002e-05,
+      "gflops": 592.907098421897,
+      "rel_err": 4.933006888861904e-07
+    },
+    {
+      "op": "pu_taylor",
+      "m": 4096,
+      "n_anchors": 96,
+      "backend": "triton",
+      "seconds": 7.77600035071373e-05,
+      "gflops": 202.27159581540303,
+      "rel_err": 4.110839074051586e-07
+    },
+    {
+      "op": "pu_taylor",
+      "m": 65536,
+      "n_anchors": 96,
+      "backend": "torch",
+      "seconds": 0.007397952079772949,
+      "gflops": 34.01728441686846,
+      "rel_err": 0.0
+    },
+    {
+      "op": "pu_taylor",
+      "m": 65536,
+      "n_anchors": 96,
+      "backend": "cuda",
+      "seconds": 4.82879988849163e-05,
+      "gflops": 5211.610458320532,
+      "rel_err": 5.343186278434588e-07
+    },
+    {
+      "op": "pu_taylor",
+      "m": 65536,
+      "n_anchors": 96,
+      "backend": "triton",
+      "seconds": 8.089599758386612e-05,
+      "gflops": 3110.886168862706,
+      "rel_err": 5.343186278434588e-07
+    },
+    {
+      "op": "pu_taylor",
+      "m": 1048576,
+      "n_anchors": 96,
+      "backend": "torch",
+      "seconds": 0.12224307250976563,
+      "gflops": 32.938732292403174,
+      "rel_err": 0.0
+    },
+    {
+      "op": "pu_taylor",
+      "m": 1048576,
+      "n_anchors": 96,
+      "backend": "cuda",
+      "seconds": 0.0005445119738578797,
+      "gflops": 7394.7535285072445,
+      "rel_err": 6.575830338316607e-07
+    },
+    {
+      "op": "pu_taylor",
+      "m": 1048576,
+      "n_anchors": 96,
+      "backend": "triton",
+      "seconds": 0.0007129279971122742,
+      "gflops": 5647.880089307096,
+      "rel_err": 5.959346244099426e-07
+    }
+  ],
+  "choice": {
+    "gram_chunk": "cuda",
+    "plane_point": "cuda",
+    "project": "cuda",
+    "pu_taylor": "cuda"
+  },
+  "detail": {
+    "gram_chunk": {
+      "size": 4194304,
+      "winner": "cuda",
+      "seconds": 0.02205695915222168,
+      "rel_err": 9.472137686478459e-08,
+      "speedup_vs_torch": 3.0770260871505233,
+      "candidates": {
+        "torch": {
+          "seconds": 0.0678698387145996,
+          "rel_err": 0.0
+        },
+        "cuda": {
+          "seconds": 0.02205695915222168,
+          "rel_err": 9.472137686478459e-08
+        },
+        "triton": {
+          "seconds": 0.32387820434570314,
+          "rel_err": 7.813707930977978e-06
+        }
+      }
+    },
+    "plane_point": {
+      "size": 67108864,
+      "winner": "cuda",
+      "seconds": 0.0018701759576797486,
+      "rel_err": 7.567620065160096e-08,
+      "speedup_vs_torch": 1.5162723537023717,
+      "candidates": {
+        "torch": {
+          "seconds": 0.0028356961011886594,
+          "rel_err": 1.0494043654921076e-07
+        },
+        "cuda": {
+          "seconds": 0.0018701759576797486,
+          "rel_err": 7.567620065160096e-08
+        },
+        "triton": {
+          "seconds": 0.001866479992866516,
+          "rel_err": 7.567620065160096e-08
+        }
+      }
+    },
+    "project": {
+      "size": 67108864,
+      "winner": "cuda",
+      "seconds": 0.001388815999031067,
+      "rel_err": 4.397025500642759e-09,
+      "speedup_vs_torch": 1.0224997216793863,
+      "candidates": {
+        "torch": {
+          "seconds": 0.0014200639724731446,
+          "rel_err": 3.574864710005537e-06
+        },
+        "cuda": {
+          "seconds": 0.001388815999031067,
+          "rel_err": 4.397025500642759e-09
+        },
+        "triton": {
+          "seconds": 0.0013275519609451294,
+          "rel_err": 6.418216684165188e-08
+        }
+      }
+    },
+    "pu_taylor": {
+      "size": 1048576,
+      "winner": "cuda",
+      "seconds": 0.0005445119738578797,
+      "rel_err": 6.575830338316607e-07,
+      "speedup_vs_torch": 224.5002467873584,
+      "candidates": {
+        "torch": {
+          "seconds": 0.12224307250976563,
+          "rel_err": 0.0
+        },
+        "cuda": {
+          "seconds": 0.0005445119738578797,
+          "rel_err": 6.575830338316607e-07
+        },
+        "triton": {
+          "seconds": 0.0007129279971122742,
+          "rel_err": 5.959346244099426e-07
+        }
+      }
+    }
+  },
+  "peak_bandwidth_gbps": 672.096,
+  "acc_tol": 0.001
+}

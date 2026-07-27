@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stam-landscape"
+version = "1.0.0"
+description = "Certified, budget-optimal loss-landscape visualisation for PyTorch models"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+keywords = ["deep-learning", "loss-landscape", "visualization", "optimization", "pytorch"]
+classifiers = [
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Scientific/Engineering :: Visualization",
+]
+dependencies = [
+  "torch>=2.0",
+  "numpy>=1.23",
+  "scipy>=1.10",
+  "matplotlib>=3.6",
+  "pillow>=9.0",
+]
+
+[project.optional-dependencies]
+# Only needed to reproduce the paper's own experiments, not to use the package.
+paper = ["torchvision>=0.15", "datasets>=2.14", "tokenizers>=0.14"]
+
+[project.urls]
+Homepage = "https://github.com/tasmaikeni13/STAM"
+
+[tool.setuptools]
+packages = ["stam", "stam.kernels", "stam.viz"]
+
+[tool.setuptools.package-data]
+"stam.kernels" = ["*.cu", "*.cpp", "*.h"]

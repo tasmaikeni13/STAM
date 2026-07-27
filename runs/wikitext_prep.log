@@ -1,0 +1,7 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Generating test split:   0%|          | 0/4358 [00:00<?, ? examples/s]Generating test split:  23%|██▎       | 1000/4358 [00:00<00:01, 2438.94 examples/s]Generating test split: 100%|██████████| 4358/4358 [00:00<00:00, 10286.16 examples/s]
+Generating train split:   0%|          | 0/36718 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 36718/36718 [00:00<00:00, 438728.58 examples/s]
+Generating validation split:   0%|          | 0/3760 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 3760/3760 [00:00<00:00, 123312.69 examples/s]
+wikitext ok
+{'dataset': 'WikiText-2 (raw)', 'tokenizer': 'byte-level BPE, vocab 7040', 'context': 256, 'train_sequences': 10911, 'eval_train_sequences': 2048, 'eval_val_sequences': 1024, 'tokens_train': 2793471, 'tokens_val': 294147}
+shapes [torch.Size([2048, 256]), torch.Size([2048, 256])]

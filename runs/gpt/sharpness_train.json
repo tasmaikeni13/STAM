@@ -1,0 +1,330 @@
+{
+  "task": "gpt",
+  "split": "train",
+  "resolution": 21,
+  "sizes": [
+    8,
+    20,
+    50,
+    128,
+    322,
+    812,
+    2048
+  ],
+  "seeds": 3,
+  "results": [
+    {
+      "examples": 8,
+      "seed": 0,
+      "apparent_sharpness_rms": 0.006925753500994138,
+      "apparent_sharpness_p90": 0.011316001015027517,
+      "value_var_mean": 0.011521553021011231,
+      "spacing": 6.806356811523438,
+      "seconds": 1.51232084503863,
+      "_device": 1,
+      "_seconds": 1.5126186429988593
+    },
+    {
+      "examples": 8,
+      "seed": 1,
+      "apparent_sharpness_rms": 0.00693130376577354,
+      "apparent_sharpness_p90": 0.01056095004712835,
+      "value_var_mean": 0.012411772168291441,
+      "spacing": 6.806356811523438,
+      "seconds": 1.5210293059935793,
+      "_device": 0,
+      "_seconds": 1.5213456739438698
+    },
+    {
+      "examples": 8,
+      "seed": 2,
+      "apparent_sharpness_rms": 0.007399357226700717,
+      "apparent_sharpness_p90": 0.012361461765478341,
+      "value_var_mean": 0.01185518171596301,
+      "spacing": 6.806356811523438,
+      "seconds": 1.340423126006499,
+      "_device": 1,
+      "_seconds": 1.3406249469844624
+    },
+    {
+      "examples": 20,
+      "seed": 0,
+      "apparent_sharpness_rms": 0.0055325117122760415,
+      "apparent_sharpness_p90": 0.008769001899612633,
+      "value_var_mean": 0.004783949881920294,
+      "spacing": 6.806356811523438,
+      "seconds": 2.9961566870333627,
+      "_device": 0,
+      "_seconds": 2.996364807942882
+    },
+    {
+      "examples": 20,
+      "seed": 1,
+      "apparent_sharpness_rms": 0.005476909380268401,
+      "apparent_sharpness_p90": 0.00899228796271415,
+      "value_var_mean": 0.004898012472439934,
+      "spacing": 6.806356811523438,
+      "seconds": 2.958170164958574,
+      "_device": 1,
+      "_seconds": 2.9583251420408487
+    },
+    {
+      "examples": 20,
+      "seed": 2,
+      "apparent_sharpness_rms": 0.005456237614361033,
+      "apparent_sharpness_p90": 0.00905749172505528,
+      "value_var_mean": 0.004763729811912809,
+      "spacing": 6.806356811523438,
+      "seconds": 3.003106393967755,
+      "_device": 0,
+      "_seconds": 3.0034310499904677
+    },
+    {
+      "examples": 50,
+      "seed": 0,
+      "apparent_sharpness_rms": 0.004487000237843047,
+      "apparent_sharpness_p90": 0.007179353322675307,
+      "value_var_mean": 0.0019290598106818373,
+      "spacing": 6.806356811523438,
+      "seconds": 6.681538003031164,
+      "_device": 1,
+      "_seconds": 6.681808411027305
+    },
+    {
+      "examples": 50,
+      "seed": 1,
+      "apparent_sharpness_rms": 0.004668775843723709,
+      "apparent_sharpness_p90": 0.0071630058035226495,
+      "value_var_mean": 0.0019255662015900772,
+      "spacing": 6.806356811523438,
+      "seconds": 6.718008802970871,
+      "_device": 0,
+      "_seconds": 6.718204983975738
+    },
+    {
+      "examples": 50,
+      "seed": 2,
+      "apparent_sharpness_rms": 0.00436949776675137,
+      "apparent_sharpness_p90": 0.007040650808848434,
+      "value_var_mean": 0.001892395942894909,
+      "spacing": 6.806356811523438,
+      "seconds": 6.7289145439863205,
+      "_device": 1,
+      "_seconds": 6.729119323077612
+    },
+    {
+      "examples": 128,
+      "seed": 0,
+      "apparent_sharpness_rms": 0.004076464484540567,
+      "apparent_sharpness_p90": 0.006177273534167068,
+      "value_var_mean": 0.0007144738670559574,
+      "spacing": 6.806356811523438,
+      "seconds": 17.08470376196783,
+      "_device": 0,
+      "_seconds": 17.08494875195902
+    },
+    {
+      "examples": 128,
+      "seed": 1,
+      "apparent_sharpness_rms": 0.004083450721270488,
+      "apparent_sharpness_p90": 0.005687049370752583,
+      "value_var_mean": 0.0007176170850099943,
+      "spacing": 6.806356811523438,
+      "seconds": 17.04216583899688,
+      "_device": 1,
+      "_seconds": 17.04236817394849
+    },
+    {
+      "examples": 128,
+      "seed": 2,
+      "apparent_sharpness_rms": 0.004045637014181519,
+      "apparent_sharpness_p90": 0.006235989588717275,
+      "value_var_mean": 0.0007122412445622787,
+      "spacing": 6.806356811523438,
+      "seconds": 17.219461251981556,
+      "_device": 0,
+      "_seconds": 17.219680674024858
+    },
+    {
+      "examples": 322,
+      "seed": 0,
+      "apparent_sharpness_rms": 0.003913081413986449,
+      "apparent_sharpness_p90": 0.005153808973671622,
+      "value_var_mean": 0.0002581176734894789,
+      "spacing": 6.806356811523438,
+      "seconds": 43.45546852995176,
+      "_device": 1,
+      "_seconds": 43.455666600959376
+    },
+    {
+      "examples": 322,
+      "seed": 1,
+      "apparent_sharpness_rms": 0.003851668836686494,
+      "apparent_sharpness_p90": 0.005418954672302998,
+      "value_var_mean": 0.0002569377990310421,
+      "spacing": 6.806356811523438,
+      "seconds": 43.777860732981935,
+      "_device": 0,
+      "_seconds": 43.77808226994239
+    },
+    {
+      "examples": 322,
+      "seed": 2,
+      "apparent_sharpness_rms": 0.0038945630224318556,
+      "apparent_sharpness_p90": 0.005531829899460656,
+      "value_var_mean": 0.0002565712678349289,
+      "spacing": 6.806356811523438,
+      "seconds": 43.6844275589101,
+      "_device": 1,
+      "_seconds": 43.68464809807483
+    },
+    {
+      "examples": 812,
+      "seed": 0,
+      "apparent_sharpness_rms": 0.0038060205312555424,
+      "apparent_sharpness_p90": 0.005120359457336004,
+      "value_var_mean": 7.303138103776562e-05,
+      "spacing": 6.806356811523438,
+      "seconds": 109.44981211295817,
+      "_device": 0,
+      "_seconds": 109.45003642898519
+    },
+    {
+      "examples": 812,
+      "seed": 1,
+      "apparent_sharpness_rms": 0.003792394950554106,
+      "apparent_sharpness_p90": 0.005081616201439432,
+      "value_var_mean": 7.317285724830805e-05,
+      "spacing": 6.806356811523438,
+      "seconds": 109.85698136605788,
+      "_device": 1,
+      "_seconds": 109.85718446504325
+    },
+    {
+      "examples": 812,
+      "seed": 2,
+      "apparent_sharpness_rms": 0.0037980178461468816,
+      "apparent_sharpness_p90": 0.00541803311464981,
+      "value_var_mean": 7.279089774001567e-05,
+      "spacing": 6.806356811523438,
+      "seconds": 109.4924563919194,
+      "_device": 0,
+      "_seconds": 109.49267973401584
+    },
+    {
+      "examples": 2048,
+      "seed": 0,
+      "apparent_sharpness_rms": 0.003763548938371303,
+      "apparent_sharpness_p90": 0.005229680621374933,
+      "value_var_mean": 0.0,
+      "spacing": 6.806356811523438,
+      "seconds": 276.739324596012,
+      "_device": 1,
+      "_seconds": 276.739560195012
+    },
+    {
+      "examples": 2048,
+      "seed": 1,
+      "apparent_sharpness_rms": 0.003763548938371303,
+      "apparent_sharpness_p90": 0.005229680621374933,
+      "value_var_mean": 0.0,
+      "spacing": 6.806356811523438,
+      "seconds": 275.94047250505537,
+      "_device": 0,
+      "_seconds": 275.94068531296216
+    },
+    {
+      "examples": 2048,
+      "seed": 2,
+      "apparent_sharpness_rms": 0.003763548938371303,
+      "apparent_sharpness_p90": 0.005229680621374933,
+      "value_var_mean": 0.0,
+      "spacing": 6.806356811523438,
+      "seconds": 276.5179818860488,
+      "_device": 1,
+      "_seconds": 276.51820067397784
+    }
+  ],
+  "true_sharpness_rms": 6.113703769937836e-05,
+  "true_sharpness_p90": 7.586487173340652e-05,
+  "stencil_constant": 2.512258691503961,
+  "domain": [
+    [
+      -45.72256088256836,
+      90.40457534790039
+    ],
+    [
+      -75.70201206207275,
+      60.425124168395996
+    ]
+  ],
+  "environment": {
+    "python": "3.11.14",
+    "platform": "Linux-5.15.0-143-generic-x86_64-with-glibc2.35",
+    "torch": "2.7.1+cu118",
+    "torch_cuda": "11.8",
+    "cudnn": 90100,
+    "cpu_count": 36,
+    "devices": [
+      {
+        "index": 0,
+        "name": "Quadro RTX 6000",
+        "major": 7,
+        "minor": 5,
+        "total_memory": 25190727680,
+        "multi_processor_count": 72,
+        "warp_size": 32,
+        "max_threads_per_block": 1024,
+        "max_threads_per_sm": 1024,
+        "shared_memory_per_block": 49152,
+        "shared_memory_per_sm": 65536,
+        "regs_per_block": 65536,
+        "l2_cache_size": 6291456,
+        "memory_bus_width": 384,
+        "memory_clock_khz": 7001000,
+        "clock_khz": 1770000,
+        "cooperative_launch": true,
+        "source": "cuda_ext",
+        "summary": "[cuda:0] Quadro RTX 6000 sm_75 (Volta/Turing) 23.5 GiB, 72 SMs, 48 KiB smem/block, peak 672 GB/s / 16.3 TFLOP/s fp32 | fp16=y fp16tc=y bf16=n tf32=n redux=n cp.async=n fp64=1/32"
+      },
+      {
+        "index": 1,
+        "name": "Quadro RTX 6000",
+        "major": 7,
+        "minor": 5,
+        "total_memory": 25190727680,
+        "multi_processor_count": 72,
+        "warp_size": 32,
+        "max_threads_per_block": 1024,
+        "max_threads_per_sm": 1024,
+        "shared_memory_per_block": 49152,
+        "shared_memory_per_sm": 65536,
+        "regs_per_block": 65536,
+        "l2_cache_size": 6291456,
+        "memory_bus_width": 384,
+        "memory_clock_khz": 7001000,
+        "clock_khz": 1770000,
+        "cooperative_launch": true,
+        "source": "cuda_ext",
+        "summary": "[cuda:1] Quadro RTX 6000 sm_75 (Volta/Turing) 23.5 GiB, 72 SMs, 48 KiB smem/block, peak 672 GB/s / 16.3 TFLOP/s fp32 | fp16=y fp16tc=y bf16=n tf32=n redux=n cp.async=n fp64=1/32"
+      }
+    ],
+    "policy": {
+      "device": "Quadro RTX 6000",
+      "sm": 75,
+      "arch": "Volta/Turing",
+      "reduce_dtype": "float32",
+      "store_dtype": "float16",
+      "compute_dtype": "float32",
+      "vector_width": 4,
+      "block_size": 256,
+      "use_redux": false,
+      "use_async_copy": false,
+      "allow_tf32": false,
+      "peak_bandwidth_gbps": 672.1,
+      "peak_fp32_gflops": 16312.3,
+      "source": "cuda_ext"
+    }
+  },
+  "seconds": 790.9036428299733
+}

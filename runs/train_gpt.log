@@ -1,0 +1,51 @@
+=== training gpt on cuda:1 ===
+  FlatParams(numel=5,018,112, tensors=36, dtype=torch.float32, device=cuda:1)
+  {"total": 5018112, "millions": 5.018, "tok": 1802240, "pos": 65536, "blocks": 3149824, "ln_f": 512}
+  data: {"dataset": "WikiText-2 (raw)", "tokenizer": "byte-level BPE, vocab 7040", "context": 256, "train_sequences": 10911, "eval_train_sequences": 2048, "eval_val_sequences": 1024, "tokens_train": 2793471, "tokens_val": 294147}
+  eval micro-batch tuned to 512 (3,555 ex/s, peak 6.98 GiB)
+  epoch   1/40  train 5.8444 (14.18%)  val 5.8662 (14.25%)  21.80 s
+  epoch   2/40  train 5.2156 (18.69%)  val 5.3332 (17.96%)  22.12 s
+  epoch   3/40  train 4.8401 (20.98%)  val 5.0319 (19.54%)  22.28 s
+  epoch   4/40  train 4.5911 (23.03%)  val 4.8511 (21.07%)  22.39 s
+  epoch   5/40  train 4.3885 (25.11%)  val 4.7267 (22.18%)  22.38 s
+  epoch   6/40  train 4.2221 (27.09%)  val 4.6355 (23.26%)  22.43 s
+  epoch   7/40  train 4.0793 (28.70%)  val 4.5687 (23.95%)  22.44 s
+  epoch   8/40  train 3.9527 (30.24%)  val 4.5177 (24.67%)  22.45 s
+  epoch   9/40  train 3.8377 (31.64%)  val 4.4851 (25.29%)  22.46 s
+  epoch  10/40  train 3.7408 (32.77%)  val 4.4679 (25.49%)  22.49 s
+  epoch  11/40  train 3.6435 (34.02%)  val 4.4524 (25.75%)  22.66 s
+  epoch  12/40  train 3.5594 (35.11%)  val 4.4529 (26.03%)  22.54 s
+  epoch  13/40  train 3.4791 (36.11%)  val 4.4517 (26.08%)  22.48 s
+  epoch  14/40  train 3.4065 (37.17%)  val 4.4656 (25.91%)  22.50 s
+  epoch  15/40  train 3.3348 (38.15%)  val 4.4796 (26.00%)  22.50 s
+  epoch  16/40  train 3.2691 (38.99%)  val 4.4984 (26.15%)  22.47 s
+  epoch  17/40  train 3.2108 (39.88%)  val 4.5212 (26.00%)  22.47 s
+  epoch  18/40  train 3.1473 (40.77%)  val 4.5448 (25.94%)  22.47 s
+  epoch  19/40  train 3.0967 (41.50%)  val 4.5761 (25.76%)  22.48 s
+  epoch  20/40  train 3.0414 (42.30%)  val 4.6069 (25.83%)  22.48 s
+  epoch  21/40  train 2.9938 (42.98%)  val 4.6362 (25.68%)  22.48 s
+  epoch  22/40  train 2.9457 (43.76%)  val 4.6679 (25.49%)  22.48 s
+  epoch  23/40  train 2.9012 (44.48%)  val 4.6937 (25.34%)  22.48 s
+  epoch  24/40  train 2.8626 (45.15%)  val 4.7311 (25.19%)  22.47 s
+  epoch  25/40  train 2.8258 (45.68%)  val 4.7717 (25.05%)  22.42 s
+  epoch  26/40  train 2.7889 (46.35%)  val 4.8050 (24.97%)  22.38 s
+  epoch  27/40  train 2.7579 (46.83%)  val 4.8349 (24.76%)  22.46 s
+  epoch  28/40  train 2.7307 (47.29%)  val 4.8659 (24.65%)  22.49 s
+  epoch  29/40  train 2.7054 (47.79%)  val 4.8949 (24.51%)  22.49 s
+  epoch  30/40  train 2.6840 (48.17%)  val 4.9238 (24.41%)  22.47 s
+  epoch  31/40  train 2.6664 (48.44%)  val 4.9493 (24.22%)  22.47 s
+  epoch  32/40  train 2.6506 (48.72%)  val 4.9708 (24.19%)  22.47 s
+  epoch  33/40  train 2.6377 (48.95%)  val 4.9823 (24.14%)  22.47 s
+  epoch  34/40  train 2.6275 (49.19%)  val 5.0020 (24.08%)  22.47 s
+  epoch  35/40  train 2.6208 (49.28%)  val 5.0117 (24.02%)  22.48 s
+  epoch  36/40  train 2.6158 (49.36%)  val 5.0209 (23.98%)  22.49 s
+  epoch  37/40  train 2.6124 (49.44%)  val 5.0269 (23.95%)  22.50 s
+  epoch  38/40  train 2.6109 (49.46%)  val 5.0303 (23.93%)  22.49 s
+  epoch  39/40  train 2.6103 (49.47%)  val 5.0318 (23.93%)  22.47 s
+  epoch  40/40  train 2.6102 (49.47%)  val 5.0322 (23.93%)  22.45 s
+
+  snapshots: 202  parameters: 5,018,112
+  trajectory buffer: 5.66 GiB
+  capture overhead: 89.8% of epoch time (14.2% excluding reference evaluations)
+  total: 15m 36s
+  wrote runs/gpt
